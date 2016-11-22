@@ -50,15 +50,15 @@ asynSetMinTimerPeriod(0.001)
 # ADCSimDetectorConfig(const char *portName, int numTimePoints, int dataType,
 #                      int maxBuffers, int maxMemory, int priority, int stackSize)
 ADCSimDetectorConfig("$(PORT)", $(YSIZE), 7, 0, 0)
-dbLoadRecords("$(ADEXAMPLE)/db/ADCSimDetector.template",  "P=$(PREFIX),R=det1:,  PORT=$(PORT),ADDR=0,TIMEOUT=1")
-dbLoadRecords("$(ADEXAMPLE)/db/ADCSimDetectorN.template", "P=$(PREFIX),R=det1:1:,PORT=$(PORT),ADDR=0,TIMEOUT=1,NAME=$(T1)")
-dbLoadRecords("$(ADEXAMPLE)/db/ADCSimDetectorN.template", "P=$(PREFIX),R=det1:2:,PORT=$(PORT),ADDR=1,TIMEOUT=1,NAME=$(T2)")
-dbLoadRecords("$(ADEXAMPLE)/db/ADCSimDetectorN.template", "P=$(PREFIX),R=det1:3:,PORT=$(PORT),ADDR=2,TIMEOUT=1,NAME=$(T3)")
-dbLoadRecords("$(ADEXAMPLE)/db/ADCSimDetectorN.template", "P=$(PREFIX),R=det1:4:,PORT=$(PORT),ADDR=3,TIMEOUT=1,NAME=$(T4)")
-dbLoadRecords("$(ADEXAMPLE)/db/ADCSimDetectorN.template", "P=$(PREFIX),R=det1:5:,PORT=$(PORT),ADDR=4,TIMEOUT=1,NAME=$(T5)")
-dbLoadRecords("$(ADEXAMPLE)/db/ADCSimDetectorN.template", "P=$(PREFIX),R=det1:6:,PORT=$(PORT),ADDR=5,TIMEOUT=1,NAME=$(T6)")
-dbLoadRecords("$(ADEXAMPLE)/db/ADCSimDetectorN.template", "P=$(PREFIX),R=det1:7:,PORT=$(PORT),ADDR=6,TIMEOUT=1,NAME=$(T7)")
-dbLoadRecords("$(ADEXAMPLE)/db/ADCSimDetectorN.template", "P=$(PREFIX),R=det1:8:,PORT=$(PORT),ADDR=7,TIMEOUT=1,NAME=$(T8)")
+dbLoadRecords("$(ADCSIMDETECTOR)/db/ADCSimDetector.template",  "P=$(PREFIX),R=det1:,  PORT=$(PORT),ADDR=0,TIMEOUT=1")
+dbLoadRecords("$(ADCSIMDETECTOR)/db/ADCSimDetectorN.template", "P=$(PREFIX),R=det1:1:,PORT=$(PORT),ADDR=0,TIMEOUT=1,NAME=$(T1)")
+dbLoadRecords("$(ADCSIMDETECTOR)/db/ADCSimDetectorN.template", "P=$(PREFIX),R=det1:2:,PORT=$(PORT),ADDR=1,TIMEOUT=1,NAME=$(T2)")
+dbLoadRecords("$(ADCSIMDETECTOR)/db/ADCSimDetectorN.template", "P=$(PREFIX),R=det1:3:,PORT=$(PORT),ADDR=2,TIMEOUT=1,NAME=$(T3)")
+dbLoadRecords("$(ADCSIMDETECTOR)/db/ADCSimDetectorN.template", "P=$(PREFIX),R=det1:4:,PORT=$(PORT),ADDR=3,TIMEOUT=1,NAME=$(T4)")
+dbLoadRecords("$(ADCSIMDETECTOR)/db/ADCSimDetectorN.template", "P=$(PREFIX),R=det1:5:,PORT=$(PORT),ADDR=4,TIMEOUT=1,NAME=$(T5)")
+dbLoadRecords("$(ADCSIMDETECTOR)/db/ADCSimDetectorN.template", "P=$(PREFIX),R=det1:6:,PORT=$(PORT),ADDR=5,TIMEOUT=1,NAME=$(T6)")
+dbLoadRecords("$(ADCSIMDETECTOR)/db/ADCSimDetectorN.template", "P=$(PREFIX),R=det1:7:,PORT=$(PORT),ADDR=6,TIMEOUT=1,NAME=$(T7)")
+dbLoadRecords("$(ADCSIMDETECTOR)/db/ADCSimDetectorN.template", "P=$(PREFIX),R=det1:8:,PORT=$(PORT),ADDR=7,TIMEOUT=1,NAME=$(T8)")
 
 # Create a standard arrays plugin, set it to get data from ADCSDetector driver.
 NDStdArraysConfigure("Image1", 3, 0, "$(PORT)", 0)
@@ -97,7 +97,7 @@ dbLoadRecords("$(ADCORE)/db/NDFFT.template","P=$(PREFIX),R=FFT8:,PORT=FFT8,ADDR=
 
 ## Load all other plugins using commonPlugins.cmd
 < $(ADCORE)/iocBoot/commonPlugins.cmd
-set_requestfile_path("$(ADEXAMPLE)/exampleApp/Db")
+set_requestfile_path("$(ADCSIMDETECTOR)/ADCSimDetectorApp/Db")
 
 #asynSetTraceIOMask("$(PORT)",0,2)
 #asynSetTraceMask("$(PORT)",0,255)
