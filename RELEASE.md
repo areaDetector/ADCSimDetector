@@ -1,17 +1,24 @@
-ADExample Releases
-===============
+ADCSimDetector Releases
+======================
 
 The latest untagged master branch can be obtained at
-https://github.com/areaDetector/ADExample.
+https://github.com/areaDetector/ADCSimDetector.
 
-Tagged source code and pre-built binary releases prior to R2-0 are included
-in the areaDetector releases available via links at
-http://cars.uchicago.edu/software/epics/areaDetector.html.
+Prior to R2-3 the files in this repository were contained in the ADExample
+repository.  ADCSimDetector was split into its own repository on Nov. 22, 2016
+and the first release of the new repository was called R2-3 to continue the
+release numbering from ADExample.
 
-Tagged source code releases from R2-0 onward can be obtained at 
+Tagged source code releases from R2-3 onward can be obtained at 
+https://github.com/areaDetector/ADCSimDetector/releases.
+
+Tagged source code releases for R2-2 can be obtained at 
 https://github.com/areaDetector/ADExample/releases.
 
-Tagged prebuilt binaries from R2-0 onward can be obtained at
+Tagged prebuilt binaries from R2-3 onward can be obtained at
+http://cars.uchicago.edu/software/pub/ADCSimDetector.
+
+Tagged prebuilt binaries for R2-2 can be obtained at
 http://cars.uchicago.edu/software/pub/ADExample.
 
 The versions of EPICS base, asyn, and other synApps modules used for each release can be obtained from 
@@ -22,6 +29,12 @@ files respectively, in the configure/ directory of the appropriate release of th
 
 Release Notes
 =============
+
+R2-3 (November 22, 2016)
+========================
+* ADCSimDetector was split into its own repository from ADExample.  The release numbering
+  starts where ADExample left off.
+
 
 R2-2 (October 28, 2016)
 ========================
@@ -42,31 +55,3 @@ R2-2 (October 28, 2016)
   receives EPICS V4 NTNDArrays over EPICS V4 PVAccess, converts them to NDArrays and calls
   areaDetector plugins.
 
-
-R2-1 (January 9, 2016)
-========================
-* Changed SchemaLocation in XML files to relative path to ADCore.
-* Fixed bug in simDetector::writeInt32.  ImageMode could be initialized.
-  Thanks to Phil Atkin for fixing this.
-* Changed st.cmd to use FTVL=SHORT rather than USHORT for 16-bit images.
-  This is more efficient, and works fine with ImageJ which always treats 16-bit images as unsigned.
-
-
-R2-0-1 (September 23, 2015)
-========================
-Changed iocs/iocSimDetector*/configure/RELEASE, replacing ADEXAMPLE_TOP with
-ADEXAMPLE.  The _TOP is not needed, and it broke the st.cmd IOC startup script.
-
-
-R2-0 (September 18, 2015)
-========================
-This is the first release of this repository.  It contains the simDetector driver and
-example IOCS.
-
-The files in this this repository were previously located in the ADCore repository.
-
-
-R1-9-1 and earlier
-==================
-Release notes are part of the
-[areaDetector Release Notes](http://cars.uchicago.edu/software/epics/areaDetectorReleaseNotes.html).
