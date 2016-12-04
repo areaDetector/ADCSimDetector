@@ -60,6 +60,7 @@ ADCSimDetector::ADCSimDetector(const char *portName, int numTimePoints, NDDataTy
 
 {
     int status = asynSuccess;
+    char versionString[20];
     const char *functionName = "ADCSimDetector";
 
     /* Create the epicsEvents for signaling to the simulate task when acquisition starts and stops */
@@ -87,6 +88,10 @@ ADCSimDetector::ADCSimDetector(const char *portName, int numTimePoints, NDDataTy
     createParam(SimFrequencyString,     asynParamFloat64, &P_Frequency);
     createParam(SimPhaseString,         asynParamFloat64, &P_Phase);
     createParam(SimNoiseString,         asynParamFloat64, &P_Noise);
+
+    epicsSnprintf(versionString, sizeof(versionString), "%d.%d.%d", 
+                  DRIVER_VERSION, DRIVER_REVISION, DRIVER_MODIFICATION);
+    setStringParam(NDDriverVersion, versionString);
 
     status |= setIntegerParam(P_NumTimePoints, numTimePoints);
     status |= setIntegerParam(NDDataType, dataType);
