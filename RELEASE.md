@@ -30,6 +30,11 @@ files respectively, in the configure/ directory of the appropriate release of th
 Release Notes
 =============
 
+R2-4 (December XXX, 2016)
+========================
+* Add support for new parameter NDDriverVersion. Minor change to driver and medm screen.
+
+
 R2-3 (November 22, 2016)
 ========================
 * ADCSimDetector was split into its own repository from ADExample.  The release numbering
