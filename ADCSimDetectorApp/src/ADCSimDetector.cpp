@@ -51,7 +51,7 @@ static void simTaskC(void *drvPvt)
 ADCSimDetector::ADCSimDetector(const char *portName, int numTimePoints, NDDataType_t dataType,
                                int maxBuffers, size_t maxMemory, int priority, int stackSize)
 
-    : asynNDArrayDriver(portName, MAX_SIGNALS, NUM_SIM_DETECTOR_PARAMS, maxBuffers, maxMemory,
+    : asynNDArrayDriver(portName, MAX_SIGNALS, maxBuffers, maxMemory,
                0, 0, /* No interfaces beyond those set in ADDriver.cpp */
                ASYN_CANBLOCK | ASYN_MULTIDEVICE, /* asyn flags*/
                1,                                /* autoConnect=1 */

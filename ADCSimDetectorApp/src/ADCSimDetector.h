@@ -51,8 +51,6 @@ protected:
     int P_Frequency;
     int P_Phase;
     int P_Noise;
-    #define LAST_SIM_DETECTOR_PARAM P_Noise
-
 
 private:
     /* These are the methods that are new to this class */
@@ -67,7 +65,4 @@ private:
     int acquiring_;
     double elapsedTime_;
 };
-
-
-#define NUM_SIM_DETECTOR_PARAMS ((int)(&LAST_SIM_DETECTOR_PARAM - &FIRST_SIM_DETECTOR_PARAM + 1))
 
