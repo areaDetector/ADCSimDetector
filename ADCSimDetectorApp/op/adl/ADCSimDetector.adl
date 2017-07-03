@@ -1,14 +1,14 @@
 
 file {
-	name="/home/epics/devel/areaDetector-2-5/ADCSimDetector/ADCSimDetectorApp/op/adl/ADCSimDetector.adl"
-	version=030107
+	name="/home/epics/devel/areaDetector-3-1/ADCSimDetector/ADCSimDetectorApp/op/adl/ADCSimDetector.adl"
+	version=030109
 }
 display {
 	object {
 		x=374
 		y=95
 		width=715
-		height=580
+		height=625
 	}
 	clr=14
 	bclr=4
@@ -116,7 +116,7 @@ composite {
 		x=360
 		y=270
 		width=350
-		height=60
+		height=110
 	}
 	"composite name"=""
 	"composite file"="ADAttrFile.adl"
@@ -861,7 +861,7 @@ composite {
 composite {
 	object {
 		x=5
-		y=340
+		y=385
 		width=705
 		height=235
 	}
@@ -870,7 +870,7 @@ composite {
 		rectangle {
 			object {
 				x=5
-				y=340
+				y=385
 				width=705
 				height=235
 			}
@@ -882,7 +882,7 @@ composite {
 		text {
 			object {
 				x=30
-				y=350
+				y=395
 				width=60
 				height=20
 			}
@@ -894,7 +894,7 @@ composite {
 		text {
 			object {
 				x=60
-				y=375
+				y=420
 				width=30
 				height=20
 			}
@@ -907,7 +907,7 @@ composite {
 		text {
 			object {
 				x=60
-				y=400
+				y=445
 				width=30
 				height=20
 			}
@@ -920,7 +920,7 @@ composite {
 		text {
 			object {
 				x=30
-				y=425
+				y=470
 				width=60
 				height=20
 			}
@@ -933,7 +933,7 @@ composite {
 		text {
 			object {
 				x=10
-				y=450
+				y=495
 				width=80
 				height=20
 			}
@@ -946,7 +946,7 @@ composite {
 		text {
 			object {
 				x=40
-				y=475
+				y=520
 				width=50
 				height=20
 			}
@@ -959,7 +959,7 @@ composite {
 		text {
 			object {
 				x=20
-				y=500
+				y=545
 				width=70
 				height=20
 			}
@@ -972,7 +972,7 @@ composite {
 		text {
 			object {
 				x=20
-				y=525
+				y=570
 				width=70
 				height=20
 			}
@@ -985,7 +985,7 @@ composite {
 		text {
 			object {
 				x=10
-				y=550
+				y=595
 				width=80
 				height=20
 			}
@@ -998,7 +998,7 @@ composite {
 		text {
 			object {
 				x=99
-				y=350
+				y=395
 				width=90
 				height=20
 			}
@@ -1010,7 +1010,7 @@ composite {
 		"text entry" {
 			object {
 				x=95
-				y=374
+				y=419
 				width=89
 				height=20
 			}
@@ -1025,7 +1025,7 @@ composite {
 		"text entry" {
 			object {
 				x=95
-				y=399
+				y=444
 				width=89
 				height=20
 			}
@@ -1040,7 +1040,7 @@ composite {
 		"text entry" {
 			object {
 				x=95
-				y=424
+				y=469
 				width=89
 				height=20
 			}
@@ -1055,7 +1055,7 @@ composite {
 		"text entry" {
 			object {
 				x=95
-				y=449
+				y=494
 				width=89
 				height=20
 			}
@@ -1070,7 +1070,7 @@ composite {
 		"text entry" {
 			object {
 				x=95
-				y=474
+				y=519
 				width=89
 				height=20
 			}
@@ -1085,7 +1085,7 @@ composite {
 		"text entry" {
 			object {
 				x=95
-				y=499
+				y=544
 				width=89
 				height=20
 			}
@@ -1100,7 +1100,7 @@ composite {
 		"text entry" {
 			object {
 				x=95
-				y=524
+				y=569
 				width=89
 				height=20
 			}
@@ -1115,7 +1115,7 @@ composite {
 		"text entry" {
 			object {
 				x=95
-				y=549
+				y=594
 				width=89
 				height=20
 			}
@@ -1130,7 +1130,7 @@ composite {
 		"text entry" {
 			object {
 				x=194
-				y=374
+				y=419
 				width=80
 				height=20
 			}
@@ -1145,7 +1145,7 @@ composite {
 		"text entry" {
 			object {
 				x=194
-				y=399
+				y=444
 				width=80
 				height=20
 			}
@@ -1160,7 +1160,7 @@ composite {
 		"text entry" {
 			object {
 				x=194
-				y=424
+				y=469
 				width=80
 				height=20
 			}
@@ -1175,7 +1175,7 @@ composite {
 		"text entry" {
 			object {
 				x=194
-				y=449
+				y=494
 				width=80
 				height=20
 			}
@@ -1190,7 +1190,7 @@ composite {
 		"text entry" {
 			object {
 				x=194
-				y=474
+				y=519
 				width=80
 				height=20
 			}
@@ -1205,7 +1205,7 @@ composite {
 		"text entry" {
 			object {
 				x=194
-				y=499
+				y=544
 				width=80
 				height=20
 			}
@@ -1220,7 +1220,7 @@ composite {
 		"text entry" {
 			object {
 				x=194
-				y=524
+				y=569
 				width=80
 				height=20
 			}
@@ -1235,7 +1235,7 @@ composite {
 		"text entry" {
 			object {
 				x=194
-				y=549
+				y=594
 				width=80
 				height=20
 			}
@@ -1250,7 +1250,7 @@ composite {
 		text {
 			object {
 				x=204
-				y=350
+				y=395
 				width=60
 				height=20
 			}
@@ -1262,7 +1262,7 @@ composite {
 		"text entry" {
 			object {
 				x=544
-				y=374
+				y=419
 				width=80
 				height=20
 			}
@@ -1277,7 +1277,7 @@ composite {
 		"text entry" {
 			object {
 				x=544
-				y=399
+				y=444
 				width=80
 				height=20
 			}
@@ -1292,7 +1292,7 @@ composite {
 		"text entry" {
 			object {
 				x=544
-				y=424
+				y=469
 				width=80
 				height=20
 			}
@@ -1307,7 +1307,7 @@ composite {
 		"text entry" {
 			object {
 				x=544
-				y=449
+				y=494
 				width=80
 				height=20
 			}
@@ -1322,7 +1322,7 @@ composite {
 		"text entry" {
 			object {
 				x=544
-				y=474
+				y=519
 				width=80
 				height=20
 			}
@@ -1337,7 +1337,7 @@ composite {
 		"text entry" {
 			object {
 				x=544
-				y=499
+				y=544
 				width=80
 				height=20
 			}
@@ -1352,7 +1352,7 @@ composite {
 		"text entry" {
 			object {
 				x=544
-				y=524
+				y=569
 				width=80
 				height=20
 			}
@@ -1367,7 +1367,7 @@ composite {
 		"text entry" {
 			object {
 				x=544
-				y=549
+				y=594
 				width=80
 				height=20
 			}
@@ -1382,7 +1382,7 @@ composite {
 		text {
 			object {
 				x=559
-				y=350
+				y=395
 				width=50
 				height=20
 			}
@@ -1394,7 +1394,7 @@ composite {
 		"text entry" {
 			object {
 				x=459
-				y=374
+				y=419
 				width=80
 				height=20
 			}
@@ -1409,7 +1409,7 @@ composite {
 		"text entry" {
 			object {
 				x=459
-				y=399
+				y=444
 				width=80
 				height=20
 			}
@@ -1424,7 +1424,7 @@ composite {
 		"text entry" {
 			object {
 				x=459
-				y=424
+				y=469
 				width=80
 				height=20
 			}
@@ -1439,7 +1439,7 @@ composite {
 		"text entry" {
 			object {
 				x=459
-				y=449
+				y=494
 				width=80
 				height=20
 			}
@@ -1454,7 +1454,7 @@ composite {
 		"text entry" {
 			object {
 				x=459
-				y=474
+				y=519
 				width=80
 				height=20
 			}
@@ -1469,7 +1469,7 @@ composite {
 		"text entry" {
 			object {
 				x=459
-				y=499
+				y=544
 				width=80
 				height=20
 			}
@@ -1484,7 +1484,7 @@ composite {
 		"text entry" {
 			object {
 				x=459
-				y=524
+				y=569
 				width=80
 				height=20
 			}
@@ -1499,7 +1499,7 @@ composite {
 		"text entry" {
 			object {
 				x=459
-				y=549
+				y=594
 				width=80
 				height=20
 			}
@@ -1514,7 +1514,7 @@ composite {
 		text {
 			object {
 				x=474
-				y=350
+				y=395
 				width=50
 				height=20
 			}
@@ -1526,7 +1526,7 @@ composite {
 		text {
 			object {
 				x=289
-				y=350
+				y=395
 				width=60
 				height=20
 			}
@@ -1538,7 +1538,7 @@ composite {
 		"text entry" {
 			object {
 				x=279
-				y=374
+				y=419
 				width=80
 				height=20
 			}
@@ -1553,7 +1553,7 @@ composite {
 		"text entry" {
 			object {
 				x=279
-				y=399
+				y=444
 				width=80
 				height=20
 			}
@@ -1568,7 +1568,7 @@ composite {
 		"text entry" {
 			object {
 				x=279
-				y=424
+				y=469
 				width=80
 				height=20
 			}
@@ -1583,7 +1583,7 @@ composite {
 		"text entry" {
 			object {
 				x=279
-				y=449
+				y=494
 				width=80
 				height=20
 			}
@@ -1598,7 +1598,7 @@ composite {
 		"text entry" {
 			object {
 				x=279
-				y=474
+				y=519
 				width=80
 				height=20
 			}
@@ -1613,7 +1613,7 @@ composite {
 		"text entry" {
 			object {
 				x=279
-				y=499
+				y=544
 				width=80
 				height=20
 			}
@@ -1628,7 +1628,7 @@ composite {
 		"text entry" {
 			object {
 				x=279
-				y=524
+				y=569
 				width=80
 				height=20
 			}
@@ -1643,7 +1643,7 @@ composite {
 		"text entry" {
 			object {
 				x=279
-				y=549
+				y=594
 				width=80
 				height=20
 			}
@@ -1658,7 +1658,7 @@ composite {
 		text {
 			object {
 				x=364
-				y=350
+				y=395
 				width=90
 				height=20
 			}
@@ -1670,7 +1670,7 @@ composite {
 		"text update" {
 			object {
 				x=364
-				y=375
+				y=420
 				width=90
 				height=18
 			}
@@ -1685,7 +1685,7 @@ composite {
 		"text update" {
 			object {
 				x=364
-				y=400
+				y=445
 				width=90
 				height=18
 			}
@@ -1700,7 +1700,7 @@ composite {
 		"text update" {
 			object {
 				x=364
-				y=425
+				y=470
 				width=90
 				height=18
 			}
@@ -1715,7 +1715,7 @@ composite {
 		"text update" {
 			object {
 				x=364
-				y=451
+				y=496
 				width=90
 				height=18
 			}
@@ -1730,7 +1730,7 @@ composite {
 		"text update" {
 			object {
 				x=364
-				y=475
+				y=520
 				width=90
 				height=18
 			}
@@ -1745,7 +1745,7 @@ composite {
 		"text update" {
 			object {
 				x=364
-				y=500
+				y=545
 				width=90
 				height=18
 			}
@@ -1760,7 +1760,7 @@ composite {
 		"text update" {
 			object {
 				x=364
-				y=525
+				y=570
 				width=90
 				height=18
 			}
@@ -1775,7 +1775,7 @@ composite {
 		"text update" {
 			object {
 				x=364
-				y=550
+				y=595
 				width=90
 				height=18
 			}
@@ -1790,7 +1790,7 @@ composite {
 		composite {
 			object {
 				x=629
-				y=350
+				y=395
 				width=70
 				height=220
 			}
@@ -1799,7 +1799,7 @@ composite {
 				"related display" {
 					object {
 						x=629
-						y=375
+						y=420
 						width=70
 						height=20
 					}
@@ -1839,7 +1839,7 @@ composite {
 				text {
 					object {
 						x=636
-						y=350
+						y=395
 						width=50
 						height=20
 					}
@@ -1851,7 +1851,7 @@ composite {
 				"related display" {
 					object {
 						x=629
-						y=400
+						y=445
 						width=70
 						height=20
 					}
@@ -1891,7 +1891,7 @@ composite {
 				"related display" {
 					object {
 						x=629
-						y=425
+						y=470
 						width=70
 						height=20
 					}
@@ -1931,7 +1931,7 @@ composite {
 				"related display" {
 					object {
 						x=629
-						y=450
+						y=495
 						width=70
 						height=20
 					}
@@ -1971,7 +1971,7 @@ composite {
 				"related display" {
 					object {
 						x=629
-						y=475
+						y=520
 						width=70
 						height=20
 					}
@@ -2011,7 +2011,7 @@ composite {
 				"related display" {
 					object {
 						x=629
-						y=500
+						y=545
 						width=70
 						height=20
 					}
@@ -2051,7 +2051,7 @@ composite {
 				"related display" {
 					object {
 						x=629
-						y=525
+						y=570
 						width=70
 						height=20
 					}
@@ -2091,7 +2091,7 @@ composite {
 				"related display" {
 					object {
 						x=629
-						y=550
+						y=595
 						width=70
 						height=20
 					}
