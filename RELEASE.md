@@ -30,6 +30,12 @@ files respectively, in the configure/ directory of the appropriate release of th
 Release Notes
 =============
 
+R2-5 (July 4, 2017)
+========================
+* Update constructor for compatibility with ADCore R3-0. 
+* Fix medm screen layout for ADCore R3-0.
+
+
 R2-4 (February 19, 2017)
 ========================
 * Add support for new parameter NDDriverVersion. Minor change to driver and medm screen.
