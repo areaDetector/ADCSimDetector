@@ -8,7 +8,7 @@
 #include "asynNDArrayDriver.h"
 
 #define DRIVER_VERSION      2
-#define DRIVER_REVISION     4
+#define DRIVER_REVISION     5
 #define DRIVER_MODIFICATION 0
 
 #define SimAcquireString        "SIM_ACQUIRE"
