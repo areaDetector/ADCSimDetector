@@ -16,10 +16,10 @@ Tagged source code releases for R2-2 can be obtained at
 https://github.com/areaDetector/ADExample/releases.
 
 Tagged prebuilt binaries from R2-3 onward can be obtained at
-http://cars.uchicago.edu/software/pub/ADCSimDetector.
+https://cars.uchicago.edu/software/pub/ADCSimDetector.
 
 Tagged prebuilt binaries for R2-2 can be obtained at
-http://cars.uchicago.edu/software/pub/ADExample.
+https://cars.uchicago.edu/software/pub/ADExample.
 
 The versions of EPICS base, asyn, and other synApps modules used for each release can be obtained from 
 the EXAMPLE_RELEASE_PATHS.local, EXAMPLE_RELEASE_LIBS.local, and EXAMPLE_RELEASE_PRODS.local
