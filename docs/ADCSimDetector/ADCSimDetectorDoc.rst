@@ -1,35 +1,15 @@
+ADCSimDetector
 =====================
-ADC Simulation driver
-=====================
 
-.. container::
-
-   .. rubric:: ADC Simulation driver
-      :name: adc-simulation-driver
-
-   .. rubric:: March 20, 2016
-      :name: march-20-2016
-
-   .. rubric:: Mark Rivers
-      :name: mark-rivers
-
-   .. rubric:: University of Chicago
-      :name: university-of-chicago
-
+:author: Mark Rivers (University of Chicago)
  
-
 Table of Contents
-=================
+-----------------
 
--  `Introduction <#Introduction>`__
--  `ADC simulation driver specific parameters <#Driver_parameters>`__
--  `Configuration <#Configuration>`__
--  `MEDM screens <#MEDM_screens>`__
-
-.. _Introduction:
+.. contents:: Contents
 
 Introduction
-============
+------------
 
 This is an `EPICS <http://www.aps.anl.gov/epics/>`__
 `areaDetector <areaDetector.html>`__ driver for a simulated ADC driver.
@@ -56,10 +36,8 @@ detector. The `ADCSimDetector class
 documentation <areaDetectorDoxygenHTML/class_a_d_c_sim_detector.html>`__
 describes this class in detail.
 
-.. _Driver_parameters:
-
 Simulation driver specific parameters
-=====================================
+-------------------------------------
 
 The simulation driver-specific parameters are the following:
 
@@ -160,7 +138,7 @@ The simulation driver-specific parameters are the following:
     - ai  
 
 Configuration
-=============
+-------------
 
 The ADCimDetector driver is created with the ADCimDetectorConfig
 command, either from C/C++ or from the EPICS IOC shell.
@@ -199,10 +177,8 @@ There an example IOC boot directory and startup script
 (`iocBoot/iocADCSimDetector/st.cmd) <ADCSimdetector_st_cmd.html>`__
 provided with ADExample.
 
-.. _MEDM_screens:
-
 MEDM screens
-============
+------------
 
 The following is the MEDM screen simDetector.adl for the simulation
 detector.
