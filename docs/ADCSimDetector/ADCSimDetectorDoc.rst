@@ -66,7 +66,7 @@ The simulation driver-specific parameters are the following:
 .. cssclass:: table-bordered table-striped table-hover
 .. flat-table::
   :header-rows: 2
-  :widths: 40 20 20 20 20 20 20
+  :widths: 20 20 10 80 20 20 10
   
   
   * - **Parameters for the driver as a whole, Parameter Definitions in ADCSimDetector.cpp and EPICS Record Definitions in ADCSimDetector.template**
