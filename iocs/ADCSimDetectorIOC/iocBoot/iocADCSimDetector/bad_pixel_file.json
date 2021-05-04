@@ -1,0 +1,13 @@
+{ "Bad pixels" :  
+  [
+    {"Pixel" : [10,0], "Set" : 0},
+    {"Pixel" : [20,0], "Set" : 1000},
+    {"Pixel" : [30,0], "Set" : 2000},
+    {"Pixel" : [40,0], "Replace" : [1,0]},
+    {"Pixel" : [50,0], "Replace" : [2,0]},
+    {"Pixel" : [60,0], "Replace" : [3,0]},
+    {"Pixel" : [70,0], "Median" : [1,0]},
+    {"Pixel" : [80,0], "Median" : [2,0]},
+    {"Pixel" : [90,0], "Median" : [3,0]}
+  ]
+}
