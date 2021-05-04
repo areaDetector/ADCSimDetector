@@ -6,25 +6,6 @@
 
 include "NDArrayBase.template"
 
-record(busy, "$(P)$(R)Acquire")
-{
-   field(PINI, "YES")
-   field(DTYP, "asynInt32")
-   field(OUT,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))SIM_ACQUIRE")
-   field(ZNAM, "Done")
-   field(ONAM, "Acquire")
-   info(autosaveFields, "VAL")
-}
-
-record(bi, "$(P)$(R)Acquire_RBV")
-{
-   field(DTYP, "asynInt32")
-   field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))SIM_ACQUIRE")
-   field(ZNAM, "Done")
-   field(ONAM, "Acquire")
-   field(SCAN, "I/O Intr")
-}
-
 record(ao, "$(P)$(R)TimeStep")
 {
    field(PINI, "YES")
