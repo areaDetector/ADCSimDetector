@@ -52,7 +52,8 @@ static void simTaskC(void *drvPvt)
 ADCSimDetector::ADCSimDetector(const char *portName, int numTimePoints, NDDataType_t dataType,
                                int maxBuffers, size_t maxMemory, int priority, int stackSize)
 
-    : asynNDArrayDriver(portName, MAX_SIGNALS, maxBuffers, maxMemory,
+      // Use MAX_SIGNALS+1 because we do NDArray callbacks on addr=0 for 2-D array, and 1-MAXSIGNALS for individual signals
+    : asynNDArrayDriver(portName, MAX_SIGNALS+1, maxBuffers, maxMemory, 
                0, 0, /* No interfaces beyond those set in ADDriver.cpp */
                ASYN_CANBLOCK | ASYN_MULTIDEVICE, /* asyn flags*/
                1,                                /* autoConnect=1 */
@@ -78,7 +79,6 @@ ADCSimDetector::ADCSimDetector(const char *portName, int numTimePoints, NDDataTy
         return;
     }
 
-    createParam(SimAcquireString,         asynParamInt32, &P_Acquire);
     createParam(SimAcquireTimeString,   asynParamFloat64, &P_AcquireTime);
     createParam(SimElapsedTimeString,   asynParamFloat64, &P_ElapsedTime);
     createParam(SimTimeStepString,      asynParamFloat64, &P_TimeStep);
@@ -205,7 +205,7 @@ template <typename epicsType> void ADCSimDetector::computeArraysT()
         elapsedTime_ += timeStep;
         if ((acquireTime > 0) && (elapsedTime_ > acquireTime)) {
             setAcquire(0);
-            setIntegerParam(P_Acquire, 0);
+            setIntegerParam(ADAcquire, 0);
             break;
         }
     }
@@ -310,11 +310,23 @@ void ADCSimDetector::simTask()
         /* Get any attributes that have been defined for this driver */
         this->getAttributes(pImage->pAttributeList);
 
-        /* Call the NDArray callback */
+        /* Call the NDArray callback for the 2-D array */
         doCallbacksGenericPointer(pImage, NDArrayData, 0);
 
         /* Call the callbacks to update any changes */
         for (i=0; i<MAX_SIGNALS; i++) {
+            NDDimension_t dims[2];
+            dims[0] = pImage->dims[0];
+            dims[1] = pImage->dims[1];
+            dims[0].size = 1;
+            dims[0].offset = i;
+            NDArray *pArray;
+            pNDArrayPool->convert(pImage, &pArray, pImage->dataType, dims);
+            // The array is now [1, numTimePoints], convert to 1-D array, [numTimePoints]
+            pArray->ndims = 1;
+            pArray->dims[0] = pArray->dims[1];
+            doCallbacksGenericPointer(pArray, NDArrayData, i+1);
+            pArray->release();      
             callParamCallbacks(i);
         }
 
@@ -345,7 +357,7 @@ asynStatus ADCSimDetector::writeInt32(asynUser *pasynUser, epicsInt32 value)
      * status at the end, but that's OK */
     status = setIntegerParam(addr, function, value);
 
-    if (function == P_Acquire) {
+    if (function == ADAcquire) {
         setAcquire(value);
     } else {
         /* If this parameter belongs to a base class call its method */
