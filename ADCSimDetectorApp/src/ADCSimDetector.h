@@ -39,9 +39,8 @@ public:
     void simTask(); /**< Should be private, but gets called from C, so must be public */
 
 protected:
-    int P_Acquire;
-    #define FIRST_SIM_DETECTOR_PARAM P_Acquire
     int P_AcquireTime;
+    #define FIRST_SIM_DETECTOR_PARAM P_AcquireTime
     int P_ElapsedTime;
     int P_TimeStep;
     int P_NumTimePoints;

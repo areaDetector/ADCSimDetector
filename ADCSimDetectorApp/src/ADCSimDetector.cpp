@@ -243,6 +243,12 @@ void ADCSimDetector::computeArrays()
         case NDFloat64:
             computeArraysT<epicsFloat64>();
             break;
+        case NDInt64:
+            computeArraysT<epicsInt64>();
+            break;
+        case NDUInt64:
+            computeArraysT<epicsUInt64>();
+            break;
     }
 }
 
