@@ -265,7 +265,6 @@ void ADCSimDetector::simTask()
 {
     int status = asynSuccess;
     NDArray *pImage;
-    epicsTimeStamp startTime;
     int numTimePoints;
     int arrayCounter;
     double timeStep;
@@ -303,9 +302,8 @@ void ADCSimDetector::simTask()
         getIntegerParam(NDArrayCounter, &arrayCounter);
         arrayCounter++;
         setIntegerParam(NDArrayCounter, arrayCounter);
-        epicsTimeGetCurrent(&startTime);
-        pImage->timeStamp = startTime.secPastEpoch + startTime.nsec / 1.e9;
         updateTimeStamp(&pImage->epicsTS);
+        pImage->timeStamp = pImage->epicsTS.secPastEpoch + pImage->epicsTS.nsec / 1.e9;
 
         /* Get any attributes that have been defined for this driver */
         this->getAttributes(pImage->pAttributeList);
